@@ -557,12 +557,14 @@
       )
     })
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/md5-js-tools@1.0.2/lib/md5.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js
+    "></script>
     <script> 
        const searchParams = new URLSearchParams(window.location.search);
        const password = searchParams.get('password');
 
-       if (MD5.generate(password) != "d77d01788d881619e33fab650a9a8d78") {
+       if (md5(password) != "d77d01788d881619e33fab650a9a8d78") {
         console.log('removing')
         let e = document.body;
         e.parentNode.removeChild(e);
