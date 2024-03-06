@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> test </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/base.css">
+    <style>
+      #map {
+          height: 400px; /* Adjust the height as needed */
+          margin-top: 5%;
+      }
+  </style>
+  </head>
+  <body>
+    <h1> Recomendaciones </h1>
+
+    <article>
+      <ul>
+        <li>
+          <a href="#shinjuku">
+            Shinjuku
+          </a>
+        </li>
+        <li>
+          <a href="#roppongi">
+            Roppongi
+          </a>
+        </li>
+      </ul>
+    </article>
+
+    <article id="shinjuku">
+      <h2> Shinjuku </h2>
+      <img class="large-square" src="./img/shinjuku.jpg">
+      <div class="large-square" id="map"></div> 
+    </article>
+
+
+    <article id="roppongi">
+     
+    </article>
+    <article id="akihabara">
+
+    </article>
+
+    <article id="odaiba">
+
+    </article>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4Lh20WQgg_4EQvSHItmEhBq_uCdOAHCg&callback=initMap" 
+    async defer></script>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // Coordinates for a location (e.g., latitude and longitude)
+            var myLatLng = { lat: 37.7749, lng: -122.4194 };
+
+            // Create a map centered at the specified coordinates
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 17, // Set the initial zoom level
+                center: myLatLng // Set the center of the map
+            });
+
+            // Create a marker at the specified coordinates and add it to the map
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'My Location'
+            });
+        }
+    </script>
+  </body>
+</html>

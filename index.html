@@ -1,11 +1,572 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title> test </title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/base.css">
+    <style>
+    #map {
+      height: 400px;
+      /* Adjust the height as needed */
+      margin-top: 5%;
+    }
+    </style>
   </head>
+
   <body>
-    <div class="red"> hello </div>
+    <h1> Recomendaciones </h1>
+    <ul id="ciudades">
+      <li>
+        <a href="#tokyo">
+          Tokyo
+        </a>
+        <ul>
+          <li><a href="#shinjuku">
+              Shinjuku
+            </a></li>
+          <li><a href="#asakusa">
+              Asakusa
+            </a></li>
+          <li><a href="#akihabara">
+              Akihabara
+            </a></li>
+          <li><a href="#odaiba">
+              odaiba
+            </a></li>
+          <li><a href="#shibuya">
+              Shibuya
+            </a></li>
+          <li><a href="#harajuku">
+              Harajuku
+            </a></li>
+          <li><a href="#tokyo-tower">
+              Tokyo tower
+            </a></li>
+          <li><a href="#sky-tree">
+              Sky tree
+            </a></li>
+          <li><a href="#roppongi">
+              Roppongi
+            </a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#kyoto">
+          Kyoto
+        </a>
+        <ul>
+          <li><a href="#kinkaku-ji">
+              Kinkaku ji
+            </a></li>
+          <li><a href="#temple">
+              Daihikaku senkoji temple
+            </a></li>
+          <li><a href="#hanami-koji">
+              Hanami Koji
+            </a></li>
+          <li><a href="#ramen-food">
+              Wajaryomen Sugari
+            </a></li>
+          <li><a href="#imperial">
+              Imperial palace
+            </a></li>
+          <li><a href="#inari">
+              Fushimi Inari Taisha
+            </a></li>
+          <li><a href="#museum">
+              Kyoto national museum
+            </a></li>
+          <li><a href="#studio-park">
+              Kyoto studio park
+            </a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#osaka">
+          Osaka
+          <ul>
+            <li><a href="#yodobashi">
+                Yodobashi
+              </a></li>
+            <li><a href="#castle">
+                Osaka Castle
+              </a></li>
+            <li><a href="#dotonbori">
+                Dotonbori
+              </a></li>
+            <li><a href="#nara">
+                Lugares cercanos
+              </a></li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a href="#random">Random</a>
+      </li>
+    </ul>
+
+    <section id="tokyo">
+      <h2> Tokyo </h2>
+      <section id="shinjuku">
+        <h3> Shinjuku </h3>
+        <img src="/img/shin1.jpg" width="300" height="300" class="large-square">
+        <img src="/img/shinjuku.jpg" class="large-square">
+        <p>
+          Este es una de las partes que mas me gusta, hay de todo pero principalmente cuando llegas podes ir al centro donde esta la cabeza de godzilla gigante, que cada tanto se prende y hace ruido.
+        </p>
+
+
+        <div id="godzilla-map" class="map"></div>
+        <p>
+          En ese edificio de podes meter por un costado, fijate estaba medio dificil encontrar la entrada cuando estuve ahi pero hay un ascensor te mandas al ultimo piso, Ahi hay un cafe y venden merch de godzilla.
+          Seguramente tengan varias cosas con la nueva pelicula que salio el anio pasado. Hay un cafe tambien ahi y un ventanal que podes ver la cabeza de godzilla aveces esta cerrada pero podes salir y mirar. Mucha gente cuando estaba cerrado no salia porque pensaban que no se podia yo sali y empezo asalir todo el mundo se ve que nomas cierran por el frio
+        </p>
+        <img src="/img/shin2.jpg" class="large-square">
+        <p> En ese mismo edificio hay un cine de Toho, que venden un monton de merch de peliculas que estan/estuvieron en cartelera hace poco. Tambien tienen firmas y eso. Nosotros fuimos a ver aelita battle angel ahi porque no estaban dando mas nada pero estuvo bueno igual. Las entradas las sacas con las maquinas pedi ayuda porque son inentendibles</p>
+
+        <div class="center-gallery">
+          <img src="/img/cine1.jpg" class="small-square">
+          <img src="/img/cine2.jpg" class="small-square">
+          <img src="/img/cine3.jpg" class="small-square">
+          <img src="/img/cine4.jpg" class="small-square">
+        </div>
+
+
+        <p> Por esa zona esta lleno de cosas para hacer ahi atras del edificio ese de toho hay maquinitas y lugares para comer siempre hay algo tambien para hacer, cuando yo fui habia un VR zone, me pegaria una vuelta para mirar nomas.</p>
+
+
+        <div class="center-gallery">
+          <img src="/img/shinvr.jpg" class="small-square">
+          <br />
+        </div>
+
+
+        <div id="vr-map" class="map"></div>
+
+        <br />
+
+        <p>
+          Mas adelante tenes un monton de tiendas que seguro viste en fotos, la mayoria son caras porque son medio tourist traps pero las tipo don quijote tenes que entrar porque tienen muchas cosas random que estan buenas
+        </p>
+
+        <div id="quijote-map" class="map"></div>
+
+        <br />
+
+        <p> Y mismo ahi enfrente tenes un Taito station para que tiene como 3 o 4 pisos de maquinitas, yo le habia encontrado la vuelta a la de los osos de arriba y saque como 15 sabers (te rajan si sacas mas de 3 por vez)</p>
+
+        <div class="center-gallery">
+          <img src="/img/shinesquina.jpg" class="small-square">
+          <img src="https://cdn.cheapoguides.com/wp-content/uploads/sites/2/2017/10/don-quijote-kabukicho_gdl-1280x600.jpg" class="small-square">
+          <img src="/img/shintaito.jpg" class="small-square">
+        </div>
+
+
+
+        <p><b> ANDA A TODOS LOS BOOKOFFS QUE ENCUENTRES EN MI HONOR</b> ahi venden desde electronica, libros hasta merch de cualquier cosa. Por lo general son cosas usadas asi que es muy barato y encontras de todo. Tienen otro que es solo de electronicos que se llama hard off. Hay un monton por todo japon yo entraba en todos los que encontraba</p>
+        <div class="center-gallery">
+          <img src="/img/bookshin.jpg" class="small-square">
+        </div>
+        <br />
+        <div id="book-map" class="map"></div>
+
+
+        <p> Para comer entre esos lugares esta lleno de restaurantes de todo tipo nosotros por lo general ibamos siempre a esos que son medio de comida rapida japonesa (arroz, hot pots, curry etc).</p>
+        <p> Cuando me juntaba con amigos de japon siempre me hacian ir a este cafe ahi (blue bottle)</p>
+
+        <div id="bottle-map" class="map"></div>
+
+        <p>por esa zona hay mas lugares para comer tambien.</p>
+
+
+        <p> Esto es una Korean BBQ (Jonetsu Horumon) que estaba re bien, nunca estaba muy lleno no era caro y estaba buena la comida, ibamos bastante seguido</p>
+
+        <div id="parrillita-map" class="map"></div>
+
+        <p> Por esos alrededores habia casas de cambio tambien si necesitas esos solian tener bastante buenos rates </p>
+        <p> Despues en shinjuku esta lleno de cosas para hacer depende de que tengas ganas hay un restaurant de robots, los fines de semana ponen una feria que venden antiguedades yo ahi compre un shogui y una rata de bronce bastante baratas </p>
+      </section>
+      <section id="asakusa">
+        <h3> Asakusa </h3>
+        <p> Esta zona esta llena de templos y cosas tradicionales como para caminar una maniana o una tarde esta bueno </p>
+        <div class="center-gallery">
+          <img src="/img/aza1.jpg" class="small-square">
+          <img src="/img/aza2.jpg" class="small-square">
+          <img src="/img/aza3.jpg" class="small-square">
+          <img src="/img/aza4.jpg" class="small-square">
+          <img src="/img/aza5.jpg" class="small-square">
+          <img src="/img/aza6.jpg" class="small-square">
+        </div>
+      </section>
+      <section id="akihabara">
+        <h3> Akihabara </h3>
+
+        <img src="/img/aki1.jpg" class="large-square">
+
+        <p> Esto es full tourist trap. Muchas cosas tenes que ver porque hay muchas chances que consigas lo mismo en otros lugares bastante mas barato pero para mirar esta genial. Hay muchos lugares de maquinitas y edificios que solo venden cosas de anime </p>
+
+        <img src="/img/aki3.jpg" class="large-square">
+
+        <p> Los mejores lugares para ir son los que venden cosas usadas porque estan casi nuevas en caja y mas barato que nuevo </p>
+
+        <p> Los lugares que yo siempre iba s el mandarake que esta afuera de la avenida y el super potato (solo venden cosas de juegos ahi) </p>
+
+        <p> El mandarake complex enorme y por ahi tambien hay book off </p>
+
+        <div class="map" id="mandarake-map"></div>
+
+        <p> El super potato si no te interesan los juegos retro no va a haber mucho pero capaz que encontras cosas de FF o Kingdom hearts ahi.</p>
+
+        <div class="map" id="potato-map"></div>
+
+
+        <p> Para comer esta esta zona donde estaba el gundam cafe: </p>
+
+        <div class="map" id="gundam-cafe"></div>
+
+        <p> el gundam cafe cerro pero en esa zona hay unos restaurantes que estan buenos tambien hay (o habia) un square enix cafe </p>
+
+        <p> A vos que te gustan los libros tenes que ir aca </p>
+
+        <div class="map" id="book-store"></div>
+
+        <p> es una libreria de como 10 pisos que tiene de todo, cada piso son generos diferentes (el ultimo piso es polemico) </p>
+
+        <p> por esa zona en frente habia una casa de cambio con buenos rates tambien en su momento y hay varios restaurantes mas baratos que en akihabara en si y mucho local de cosa usada y librerias copadas </p>
+      </section>
+      <section id="odaiba">
+        <h3> Odaiba </h3>
+
+        <p> A mi me gusta mucho odaiba porque esta la gunpla base, que tiene el gundam gigante, ahora creo que pusieron otro. En unas horas del dia hace como un show de luces y se transforma. </p>
+
+        <p> Si vas para odaiba anda para el lado de la gunpla base, ahi nomas tenes como un museo o no se que es de toyota que esta lleno de prototipos de autos juegos y esas cosas, tambien hay una rueda gigante que te podes subir y ves todo.</p>
+
+        <div class="center-gallery">
+          <img src="/img/odai1.jpg" class="small-square">
+          <img src="/img/odai2.jpg" class="small-square">
+          <img src="/img/odai3.jpg" class="small-square">
+          <img src="/img/odai4.jpg" class="small-square">
+          <img src="/img/odai5.jpg" class="small-square">
+          <img src="/img/oda12.jpg" class="small-square">
+        </div>
+
+        <br />
+
+        <div class="map" id="gundam"></div>
+
+        <p> Ahi nomas tambien tenes donde mataron a wizardmon en digimon adventure</p>
+
+        <img src="img/oda10.jpg" class="large-square">
+
+        <p> Y de ahi podes caminar un poco hasta la parte de la cosa hay como una playita y un recorido con cosas random tipo la estatua de la libertad(?)</p>
+
+        <div class="center-gallery">
+          <img src="/img/coast.jpg" class="small-square">
+          <img src="/img/oda15.jpg" class="small-square">
+        </div>
+
+        <div class="map" id="coast-map"></div>
+      </section>
+      <section id="shibuya">
+        <h3> Shibuya </h3>
+
+
+        <img src="/img/shib.jpg" class="large-square">
+
+        <p> Aca la verdad no hice mas de lo que hace todo el mundo el cruce de la gente el hachico y meterte en alguno de esos edificios que subis y ves el cruce de la calle desde arriba</p>
+        <p> esta bueno si tenes que comprar ropa y eso (cuidado con las ratas) </p>
+
+        <div class="center-gallery">
+          <img src="/img/shibdog.jpg" class="small-square">
+          <img src="/img/shib4.jpg" class="small-square">
+          <img src="/img/shibrata.jpg" class="small-square">
+        </div>
+
+      </section>
+      <section id="harajuku">
+        <h3> Harajuku </h3>
+        <img src="/img/hara.jpg" class="large-square">
+        <p> Es el distrito de moda, habia mucha gente rara asi que me fui</p>
+      </section>
+      <section id="tokyo-tower">
+        <h3> Tokyo Tower </h3>
+        <img src="/img/tower1.jpg" class="large-square">
+        <p> Nada aca tenes que ir porque esta bueno y es gratis, si subis al mirador esta pink guy que te saluda </p>
+        <p> Cuando yo fui la ultima vez era el 60 aniversario y estaba todo decorado creo que ahora seria el 65 si tenes suerte tambien ponen giladas </p>
+
+        <div class="center-gallery">
+          <img src="/img/tower.jpg" class="small-square">
+          <img src="/img/tower2.jpg" class="small-square">
+          <img src="/img/tower3.jpg" class="small-square">
+        </div>
+      </section>
+      <section id="sky-tree">
+        <h3> Sky Tree</h3>
+
+        <img src="/img/skytree.jpg" class="large-square">
+
+        <p> Mas o menos lo mismo que la tokyo tower pero mas alta y mas cara, podes pagar distintos rates depende que tan alto quieras subir. Yo nunca pague asi que no se </p>
+
+        <p> Esta linda la zona hay muchos stores y cafes ahi cerca tipo el Kirby Cafe, Pokemon center etc (el kirby cafe tenes que sacar turno como una semana antes para ir )</p>
+
+        <div class="center-gallery">
+          <img src="/img/kirbycafe.jpg" class="small-square">
+          <img src="/img/center.jpg" class="small-square">
+        </div>
+      </section>
+      <section id="roppongi">
+        <h3> Roppongi </h3>
+        <img src="/img/roppo.jpg" class="large-square">
+        <p> esto esta cerca de la tokyo tower, es tipo el distrito de oficinas yo fui porque unos amigos con los que me junte laburan por ahi hay mucho cafe y eso pero no hice mucho mas</p>
+      </section>
+    </section>
+
+    <section id="kyoto">
+      <h2> Kyoto </h2>
+      <section id="kinkaku-ji">
+        <h3> Kinkaku JI</h3>
+
+        <img src="/img/castle.jpg" class="large-square">
+
+        <p> Es tipo un parque que tiene varios recorridos y este castillo de oro en el medio</p>
+      </section>
+      <section id="temple">
+        <h3> Daihikaku senkoji temple</h3>
+
+        <div class="map" id="temple-map"></div>
+
+        <img src="/img/templeview.jpg" class="large-square">
+
+        <p> Esta bueno para hikear hay un lago unos caminos, un bosque de bamboo cerca y podes elegir subir hasta un templo que tiene papeles y vista hacia abajo de la montania (podes buscar a ver si esta lo que escribi ahi y podes escribir en los papeles esos del templo) o podes hacer un camino que esta antes que pagas unos yenes y podes hacer un hiking en un monte que esta lleno de monos arriba del todo de esta moniania hay un parate donde podes darles de comer (los monos son medio malos y el hike tenes que hacerlo con ganas porque es alto)</p>
+
+        <div class="center-gallery">
+          <img src="/img/templ1.jpg" class="small-square">
+          <img src="/img/templ2.jpg" class="small-square">
+          <img src="/img/templ3.jpg" class="small-square">
+          <img src="/img/monke.jpg" class="small-square">
+          <img src="/img/bamboo.jpg" class="small-square">
+        </div>
+      </section>
+      <section id="hanami-koji">
+        <h3> Hanami Koji </h3>
+        <img src="/img/IMG_20190210_160918.jpg" class="large-square">
+
+        <p> Es como una calle larga en una zona que esta como si fuera edo, todo hasta los starbucks estan ambientados. Siempre esta hasta las bolas pero esta bueno. Ahi nomas esta el area del Masuyato que es parecida. (me cruce muchos argentinos aca) </p>
+      </section>
+      <section id="ramen-food">
+        <h3> Wajaryomen Sugari </h3>
+        <p> esta medio escondido pero vende excelente ramen. Esta en el centro asi que si andas por la noche hay muchos otros lugares para comer y gente tocando musica y dando vueltas</p>
+        <div class="map" id="ramen"></div>
+      </section>
+      <section id="imperial">
+        <h3> Kyoto imperial palace</h3>
+        <img src="/img/kyoto2.jfif" class="large-square">
+        <p>Era el palacio imperial cuando la capital era kyoto, esta bueno para caminar tambien.</p>
+      </section>
+      <section id="inari">
+        <h3> Fushimi Inari Taisha </h3>
+        <img src="/img/fushimiri.jpg" class="large-square">
+
+        <p> El templo de los zorros, es un must generalmente </p>
+      </section>
+      <section id="museum">
+        <h3> Kyoto national museum </h3>
+
+        <img src="img/IMG_20190210_151205.jpg" class="large-square">
+
+        <p> Este museo me gusto tiene muchas cosas de arte y artefactos viejos </p>
+      </section>
+      <section id="studio-park">
+        <h3>Kyoto studio park</h3>
+        <img src="/img/kyotostudiopark.jpg" class="large-square">
+
+        <p> Es un parque que atras tiene como un mini pueblo de la epoca samurai armado porque ahi se filmaban peliculas. Tambien tiene todo lo que se uso para hacer power rangers y kamen raider, cosas de sailor moon, once piece, digimon y no se que mas creo que es todo toho y bandai</p>
+        <div class="center-gallery">
+          <img src="/img/kamen.jpg" class="small-square">
+          <img src="/img/kamen2.jpg" class="small-square">
+          <img src="/img/kamen3.jpg" class="small-square">
+          <img src="/img/kamen4.jpg" class="small-square">
+          <img src="/img/kamen5.jpg" class="small-square">
+          <img src="/img/kamen6.jpg" class="small-square">
+        </div>
+      </section>
+    </section>
+
+    <section id="osaka">
+      <h2> Osaka </h2>
+      <section id="yodobashi">
+        <h3> Yodobashi </h3>
+
+        <img src="/img/yodobashi.png" class="large-square">
+        <p> Afuera de la estacion hay un shopping giante que hay de todo ahi mismo hay una rueda parecida a la de odaiba que ves casi todo el centro, recomiendo ir de noche </p>
+        <p> Ahi en invierno ponen una pista de hielo en primavera supongo que ponen algo tambien</p>
+        <div class="center-gallery">
+          <img src="img/osak1.jpg" class="small-square">
+          <img src="img/osak2.jpg" class="small-square">
+        </div>
+      </section>
+      <section id="castle">
+        <h3> Osaka castle </h3>
+        <img src="/img/osakacastle.jpg" class="large-square">
+        <p> Otro castillo que tambien esta bueno para pasear </p>
+      </section>
+      <section id="dotonbori">
+        <h3> Dotonbori </h3>
+        <img src="/img/dotonbori.jpg" class="large-square">
+        <p> Otro must, por aca tenes que comer Ichiran Ramen </p>
+      </section>
+      <section id="nara">
+        <h3> Ir a Nara </h3>
+
+        <p> Aca nunca estuve mas de un dia o 2 a la vez, esta cerca de nara y Kobe que creo que a nara vas pero si te sobra tiempo ir a Kobe tambien esta bueno</p>
+      </section>
+    </section>
+
+    <section id="random">
+
+      <h3> Random </h3>
+
+      <img src="./img/creppe.jpg" class="large-square">
+
+      <p> si alguien te vende esas Crepas compra que estan buenas</p>
+
+      <p> si tenes que comprar valijas en akihabara estan (estaban?) baratas </p>
+    </section>
+    <script>
+    (g => {
+      var h, a, k, p = "The Google Maps JavaScript API",
+        c = "google",
+        l = "importLibrary",
+        q = "__ib__",
+        m = document,
+        b = window;
+      b = b[c] || (b[c] = {});
+      var d = b.maps || (b.maps = {}),
+        r = new Set,
+        e = new URLSearchParams,
+        u = () => h || (h = new Promise(async (f, n) => {
+          await (a = m.createElement("script"));
+          e.set("libraries", [...r] + "");
+          for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+          e.set("callback", c + ".maps." + q);
+          a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+          d[q] = f;
+          a.onerror = () => h = n(Error(p + " could not load."));
+          a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+          m.head.append(a)
+        }));
+      d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
+    })
+    ({
+      key: "AIzaSyA4Lh20WQgg_4EQvSHItmEhBq_uCdOAHCg",
+      v: "weekly"
+    });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const initMap = async (position, id, zoom = 15) => {
+
+        //const position = { lat: -25.344, lng: 131.031 };
+        const {
+          Map
+        } = await google.maps.importLibrary("maps");
+        const {
+          AdvancedMarkerElement
+        } = await google.maps.importLibrary("marker");
+
+        // The map, centered at Uluru
+        map = new Map(document.getElementById(id), {
+          zoom: 18,
+          center: {
+            lat: position[0],
+            lng: position[1]
+          },
+          mapId: id,
+        });
+
+        // The marker, positioned at Uluru
+        const marker = new AdvancedMarkerElement({
+          map: map,
+          position: {
+            lat: position[0],
+            lng: position[1]
+          },
+          title: id
+        });
+      }
+
+
+      initMap(
+        [35.69534006354539, 139.70194383857162], 'godzilla-map'
+      )
+
+      initMap(
+        [35.69625802071315, 139.70073084232837], 'vr-map'
+      )
+
+      initMap(
+        [35.693508336972975, 139.7015035250558], 'quijote-map'
+      )
+
+      initMap(
+        [35.69167716325203, 139.71189158089985], 'book-map'
+      )
+
+      initMap(
+        [35.68926325111907, 139.70213665767162], 'bottle-map'
+      )
+
+      initMap(
+        [35.69323663699215, 139.69961398352353], 'parrillita-map'
+      )
+
+      initMap(
+        [35.7004773, 139.7705921], 'mandarake-map'
+      )
+
+      initMap(
+        [35.6993585, 139.7707015], 'potato-map'
+      )
+
+      initMap(
+        [35.69939555551412, 139.77307125438062], 'gundam-cafe'
+      )
+
+      initMap(
+        [35.697421625560274, 139.77517000374567], 'book-store'
+      )
+
+      initMap(
+        [35.627964, 139.772087], 'coast-map'
+      )
+
+      initMap(
+        [35.62562502686098, 139.77615975476454], 'gundam'
+      )
+
+      initMap(
+        [35.016240341339476, 135.6656293730148], 'temple-map'
+      )
+
+      initMap(
+        [35.00477940758653, 135.75710838095546], 'ramen'
+      )
+    })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/md5-js-tools@1.0.2/lib/md5.min.js"></script>
+    <script>
+             
+       const searchParams = new URLSearchParams(window.location.search);
+       const password = searchParams.get('password');
+
+       if (MD5.generate(password) != "d77d01788d881619e33fab650a9a8d78") {
+        let e = document.body;
+        e.parentNode.removeChild(e);
+       }
+    </script>    
   </body>
 </html>

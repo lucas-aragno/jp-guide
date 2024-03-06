@@ -1,3 +1,29 @@
-.red {
-  color: red;
+* {
+  font-family: 'DM Sans';
+}
+
+.large-square {
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+  display: block;
+  margin: auto;
+}
+
+.small-square {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  margin: auto;
+}
+
+.center-gallery {
+  text-align: center;
+}
+
+.map {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
 }
