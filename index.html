@@ -557,18 +557,23 @@
       )
     })
     </script>
-    <script src="
-    https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js
-    "></script>
     <script> 
-       const searchParams = new URLSearchParams(window.location.search);
-       const password = searchParams.get('password');
+      const searchParams = new URLSearchParams(window.location.search);
+      const password = searchParams.get('password');
 
-       if (md5(password) != "d77d01788d881619e33fab650a9a8d78") {
-        console.log('removing')
-        let e = document.body;
-        e.parentNode.removeChild(e);
-       }
+      async function sha256(source) {
+        const sourceBytes = new TextEncoder().encode(source);
+        const digest = await crypto.subtle.digest("SHA-256", sourceBytes);
+        const resultBytes = [...new Uint8Array(digest)];
+        return resultBytes.map(x => x.toString(16).padStart(2, '0')).join("");
+      }
+
+      sha256(password).then(result => {
+        if (result != "a24ae017175c95f09651b05c0e3295c6fbfcbc23999c45cfa59488b22768589a") {
+          let e = document.body;
+          e.parentNode.removeChild(e);
+        }
+      })
     </script>    
   </body>
 </html>
