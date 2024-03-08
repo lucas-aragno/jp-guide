@@ -27,3 +27,8 @@
   height: 500px;
   margin: 0 auto;
 }
+
+.centered {
+  text-align: center;
+  margin-top: 10px;
+}
